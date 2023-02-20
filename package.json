@@ -1,7 +1,7 @@
 {
-  "name": "fem-template",
+  "name": "fem-creative-single-page-site",
   "version": "1.0.0",
-  "description": "Front-end mentor Template Repository",
+  "description": "Front-end mentor Creative Single-page Site",
   "main": "index.js",
   "scripts": {
     "start": "vite",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jefcooper/fem-template.git"
+    "url": "git+https://github.com/jefcooper/fem-creative-single-page-site.git"
   },
   "author": "Jeff Cooper",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jefcooper/fem-template/issues"
+    "url": "https://github.com/jefcooper/fem-creative-single-page-site/issues"
   },
-  "homepage": "https://github.com/jefcooper/fem-template#readme",
+  "homepage": "https://github.com/jefcooper/fem-creative-single-page-site#readme",
   "devDependencies": {
     "glob": "^8.0.3",
     "path": "^0.12.7",
