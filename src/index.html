@@ -26,13 +26,13 @@
           </a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a class="menu--1" href="#">About</a>
         </li>
         <li>
-          <a href="#">Service</a>
+          <a class="menu--1" href="#">Service</a>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <a class="menu--1" href="#">Projects</a>
         </li>
         <li>
           <a href="#" class="btn btn--secondary">
@@ -45,6 +45,11 @@
   </header>
   <main class="main">
     <section class="hero">
+      <picture>
+        <source media="(min-width: 1024px)" width="895" height="800" srcset="assets/desktop/image-hero.jpg">
+        <source media="(min-width: 768px)" width="438" height="606" srcset="assets/tablet/image-hero.jpg">
+        <img width="375" height="200" src="assets/mobile/image-hero.jpg" alt="Team at work">
+      </picture>
       <h1 class="heading--1">
         Branding & website design agency
       </h1>
@@ -60,6 +65,12 @@
     </section>
 
     <section class="design">
+      <picture>
+        <source media="(min-width: 1024px)" width="735" height="984" srcset="assets/desktop/image-strategic.jpg">
+        <source media="(min-width: 768px)" width="378" height="658" srcset="assets/tablet/image-strategic.jpg">
+        <img src="assets/mobile/image-strategic.jpg" alt="">
+      </picture>
+
       <h2 class="heading--2">
         Design is strategic.
       </h2>
@@ -81,7 +92,9 @@
 
       <ol class="approach__list">
         <li class="approach__list-item">
-          Brand strategy
+          <h3 class="heading--3">
+            Brand strategy
+          </h3>
           <p class="text--1">
             Brand strategy is critical for long-term success. Outshining competitors and capturing
             the target audience are key.
@@ -89,7 +102,9 @@
         </li>
 
         <li class="approach__list-item">
-          Brand design
+          <h3 class="heading--3">
+            Brand design
+          </h3>
           <p class="text--1">
             Keeping the brand design unique and meaningful helps in communicating the brand’s timeless
             value effectively.
@@ -97,7 +112,9 @@
         </li>
 
         <li class="approach__list-item">
-          Web design
+          <h3 class="heading--3">
+            Web design
+          </h3>
           <p class="text--1">
             A beautifully crafted website is the best tool for brand awareness, and ultimately results
             in increased revenues.
@@ -113,22 +130,28 @@
       <div class="carousel__controls">
         <button type="button" class="btn btn--icon">
           <span class="visually-hidden">Display Previous Project</span>
-          <img src="assets/icon-arrow-previous.svg" alt="" aria-hidden="true">
+          <svg class="icon icon--arrow-previous" aria-hidden="true">
+            <use href="assets/icons.svg#icon--arrow-previous"></use>
+          </svg>
         </button>
         <button type="button" class="btn btn--icon">
           <span class="visually-hidden">Display Next Project</span>
-          <img src="assets/icon-arrow-next.svg" alt="" aria-hidden="true">
+          <svg class="icon icon--arrow-next" aria-hidden="true">
+            <use href="assets/icons.svg#icon--arrow-next"></use>
+          </svg>
         </button>
       </div>
 
       <ul class="carousel__slider">
         <li class="carousel__card">
-          <h3 class="heading--3">
+          <h3 class="heading--2">
             Brand naming & guidelines
           </h3>
           <figure>
             <picture>
-              <img src="assets/mobile/image-slide-1.jpg" alt="Lean Roadmap Book">
+              <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-1.jpg">
+              <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-1.jpg">
+              <img width="375" height="404" src="assets/mobile/image-slide-1.jpg" alt="Lean Roadmap Book">
             </picture>
             <figcaption>
               <p class="heading--3">
@@ -142,11 +165,13 @@
         </li>
 
         <li class="carousel__card">
-          <h3 class="heading--3">
+          <h3 class="heading--2">
             Brand identity & merchandise
           </h3>
           <picture>
-            <img src="assets/mobile/image-slide-2.jpg" alt="New Majestic Hotel Shopping Bag">
+            <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-2.jpg">
+            <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-2.jpg">
+            <img width="375" height="404" src="assets/mobile/image-slide-2.jpg" alt="New Majestic Hotel Shopping Bag">
           </picture>
           <figure>
             <figcaption>
@@ -165,7 +190,9 @@
             Brand identity & web design
           </h3>
           <picture>
-            <img src="assets/mobile/image-slide-3.jpg" alt="Crypto Dashboard Computer Screen">
+            <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-3.jpg">
+            <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-3.jpg">
+            <img width="375" height="404" src="assets/mobile/image-slide-3.jpg" alt="Crypto Dashboard Computer Screen">
           </picture>
           <figure>
             <p class="heading--3">

@@ -4,7 +4,11 @@
  * Rectangular with neutral (dark grey) background
  */
 .btn {
+  display: inline-block;
   border: none;
+
+  padding-inline: 2.75rem;
+  padding-block: 1.375rem;
 
   color: var(--theme-btn-clr);
   background-color: transparent;
@@ -18,10 +22,18 @@
  */
 .btn--primary {
   background-color: var(--theme-btn-primary-bg);
+
+  &:hover {
+    background-color: var(--theme-btn-primary-bg-hover);
+  }
 }
 
 .btn--secondary {
   background-color: var(--theme-btn-secondary-bg);
+
+  &:hover {
+    background-color: var(--theme-btn-secondary-bg-hover);
+  }
 }
 
 /**
@@ -30,10 +42,16 @@
 .btn--link {
   color: var(--theme-btn-link-clr);
   text-decoration: underline;
+  padding: 0;
+
+  &:hover {
+    color: var(--theme-btn-primary-bg-hover);
+  }
 }
 
 /**
  * icon-only for carousel arrows
  */
 .btn--icon {
+  padding: 0;
 }

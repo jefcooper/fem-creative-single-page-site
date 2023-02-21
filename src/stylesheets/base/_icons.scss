@@ -5,10 +5,6 @@
   fill: var(--theme-icon-clr);
 }
 
-.icon--light {
-  fill: var(--theme-icon-clr-light);
-}
-
 .icon--logo {
   width: 97px;
   height: 40px;
@@ -16,21 +12,30 @@
 
 .icon--hamburger {
   width: 24px;
-  height: 17px;
-}
-
-.icon--close {
-  width: 20px;
-  height: 21px;
-}
-
-.icon--arrow {
-  width: 26px;
-  height: 20px;
-  stroke: var(--theme-icon-clr-light);
-}
-
-.icon--left-arrow {
-  width: 18px;
   height: 18px;
+}
+
+.icon--cross {
+  width: 20px;
+  height: 20px;
+}
+
+.icon--arrow-previous {
+  width: 40px;
+  height: 40px;
+  stroke: var(--theme-btn-primary-bg);
+
+  &:hover {
+    stroke: var(--theme-btn-primary-bg-hover);
+  }
+}
+
+.icon--arrow-next {
+  width: 40px;
+  height: 40px;
+  stroke: var(--theme-btn-primary-bg);
+
+  &:hover {
+    stroke: var(--theme-btn-primary-bg-hover);
+  }
 }

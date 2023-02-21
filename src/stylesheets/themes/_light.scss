@@ -10,7 +10,9 @@
   --theme-btn-clr: #{colors.$clr-neutral-100};
   --theme-btn-link-clr: #{colors.$clr-accent-400};
   --theme-btn-primary-bg: #{colors.$clr-accent-400};
+  --theme-btn-primary-bg-hover: #{colors.$clr-accent-300};
   --theme-btn-secondary-bg: #{colors.$clr-neutral-800};
+  --theme-btn-secondary-bg-hover: #{colors.$clr-neutral-700};
 }
 
 .theme--light {
