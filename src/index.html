@@ -15,16 +15,27 @@
   <script src="scripts/script.js" type="module"></script>
 </head>
 
-<body class="body theme--default">
+<body class="body theme--light">
   <header class="header">
     <nav class="nav">
-      <ul>
-        <li>
-          <a href="#" class="nav__logo">
-            <span class="visually-hidden">Creative Agency Home</span>
-            <img src="assets/logo.svg" alt="" aria-hidden="true">
-          </a>
-        </li>
+      <a href="#" class="nav__logo">
+        <span class="visually-hidden">Creative Agency Home</span>
+        <img src="assets/logo.svg" alt="" aria-hidden="true">
+      </a>
+      <input type="checkbox" id="nav__toggle" class="visually-hidden nav__toggle">
+      <label for="nav__toggle" class="nav__toggle-open">
+        <span class="visually-hidden">Show Mobile Menu</span>
+        <svg class="icon icon--hamburger" aria-hidden="true">
+          <use href="assets/icons.svg#icon--hamburger"></use>
+        </svg>
+      </label>
+      <label for="nav__toggle" class="nav__toggle-close">
+        <span class="visually-hidden">Hide Mobile Menu</span>
+        <svg class="icon icon--cross" aria-hidden="true">
+          <use href="assets/icons.svg#icon--cross"></use>
+        </svg>
+      </label>
+      <ul class="nav__list">
         <li>
           <a class="menu--1" href="#">About</a>
         </li>
@@ -50,72 +61,77 @@
         <source media="(min-width: 768px)" width="438" height="606" srcset="assets/tablet/image-hero.jpg">
         <img width="375" height="200" src="assets/mobile/image-hero.jpg" alt="Team at work">
       </picture>
-      <h1 class="heading--1">
-        Branding & website design agency
-      </h1>
+      <div class="hero__container">
+        <h1 class="heading--1 hero__heading">
+          Branding & website design agency
+        </h1>
 
-      <p class="text--1">
-        We specialize in visual storytelling by creating cohesive brand and website design
-        solutions for small businesses, giving lasting impressions to audiences in a digital world.
-      </p>
+        <p class="text--1 hero__description">
+          We specialize in visual storytelling by creating cohesive brand and website design
+          solutions for small businesses, giving lasting impressions to audiences in a digital world.
+        </p>
 
-      <a href="#" class="btn btn--primary">
-        Learn more
-      </a>
+        <a href="#" class="btn btn--primary hero__button">
+          Learn more
+        </a>
+      </div>
     </section>
 
     <section class="design">
       <picture>
         <source media="(min-width: 1024px)" width="735" height="984" srcset="assets/desktop/image-strategic.jpg">
         <source media="(min-width: 768px)" width="378" height="658" srcset="assets/tablet/image-strategic.jpg">
-        <img src="assets/mobile/image-strategic.jpg" alt="">
+        <img width="375" height="200" src="assets/mobile/image-strategic.jpg" alt="">
       </picture>
 
-      <h2 class="heading--2">
-        Design is strategic.
-      </h2>
+      <div class="design__container">
+        <h2 class="heading--2">
+          <span class="clr-accent">Design</span>
+          is strategic.
+        </h2>
 
-      <p class="text--1">
-        A well-crafted design strategy consistently produces desired outcomes and brand awareness.
-        We are firm believers that success lies in creative collaboration with our clients.
-      </p>
+        <p class="text--1 design__description">
+          A well-crafted design strategy consistently produces desired outcomes and brand awareness.
+          We are firm believers that success lies in creative collaboration with our clients.
+        </p>
 
-      <a href="#" class="btn btn--link">
-        Schedule a call
-      </a>
+        <a href="#" class="btn btn--link design__button">
+          Schedule a call
+        </a>
+      </div>
     </section>
 
     <section class="approach">
-      <h2 class="heading--2">
+      <h2 class="heading--2 approach__title">
         Our approach for creating a winning brand
       </h2>
 
       <ol class="approach__list">
         <li class="approach__list-item">
-          <h3 class="heading--3">
+          <h3 class="heading--3 approach__list-item-title">
             Brand strategy
           </h3>
-          <p class="text--1">
+          <p class="text--1 approach__list-item-description">
             Brand strategy is critical for long-term success. Outshining competitors and capturing
             the target audience are key.
           </p>
         </li>
 
         <li class="approach__list-item">
-          <h3 class="heading--3">
+          <h3 class="heading--3 approach__list-item-title">
             Brand design
           </h3>
-          <p class="text--1">
+          <p class="text--1 approach__list-item-description">
             Keeping the brand design unique and meaningful helps in communicating the brand’s timeless
             value effectively.
           </p>
         </li>
 
         <li class="approach__list-item">
-          <h3 class="heading--3">
+          <h3 class="heading--3 approach__list-item-title">
             Web design
           </h3>
-          <p class="text--1">
+          <p class="text--1 approach__list-item-description">
             A beautifully crafted website is the best tool for brand awareness, and ultimately results
             in increased revenues.
           </p>
@@ -123,18 +139,18 @@
       </ol>
     </section>
 
-    <section class="carousel">
+    <section class="project-portfolio">
 
       <h2 class="visually-hidden">Project Portfolio</h2>
 
       <div class="carousel__controls">
-        <button type="button" class="btn btn--icon">
+        <button type="button" class="btn btn--icon" data-carousel-previous>
           <span class="visually-hidden">Display Previous Project</span>
           <svg class="icon icon--arrow-previous" aria-hidden="true">
             <use href="assets/icons.svg#icon--arrow-previous"></use>
           </svg>
         </button>
-        <button type="button" class="btn btn--icon">
+        <button type="button" class="btn btn--icon" data-carousel-next>
           <span class="visually-hidden">Display Next Project</span>
           <svg class="icon icon--arrow-next" aria-hidden="true">
             <use href="assets/icons.svg#icon--arrow-next"></use>
@@ -142,16 +158,17 @@
         </button>
       </div>
 
-      <ul class="carousel__slider">
+      <ul class="carousel" data-carousel>
         <li class="carousel__card">
-          <h3 class="heading--2">
+          <h3 class="heading--2 carousel__card-title">
             Brand naming & guidelines
           </h3>
           <figure>
-            <picture>
+            <picture class="carousel__picture">
               <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-1.jpg">
               <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-1.jpg">
-              <img width="375" height="404" src="assets/mobile/image-slide-1.jpg" alt="Lean Roadmap Book">
+              <img class="carousel__img" width="375" height="404" src="assets/mobile/image-slide-1.jpg"
+                alt="Lean Roadmap Book">
             </picture>
             <figcaption>
               <p class="heading--3">
@@ -165,15 +182,16 @@
         </li>
 
         <li class="carousel__card">
-          <h3 class="heading--2">
+          <h3 class="heading--2 carousel__card-title">
             Brand identity & merchandise
           </h3>
-          <picture>
-            <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-2.jpg">
-            <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-2.jpg">
-            <img width="375" height="404" src="assets/mobile/image-slide-2.jpg" alt="New Majestic Hotel Shopping Bag">
-          </picture>
           <figure>
+            <picture class="carousel__picture">
+              <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-2.jpg">
+              <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-2.jpg">
+              <img class="carousel__img" width="375" height="404" src="assets/mobile/image-slide-2.jpg"
+                alt="New Majestic Hotel Shopping Bag">
+            </picture>
             <figcaption>
               <p class="heading--3">
                 New Majestic Hotel
@@ -186,21 +204,24 @@
         </li>
 
         <li class="carousel__card">
-          <h3 class="heading--2">
+          <h3 class="heading--2 carousel__card-title">
             Brand identity & web design
           </h3>
-          <picture>
-            <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-3.jpg">
-            <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-3.jpg">
-            <img width="375" height="404" src="assets/mobile/image-slide-3.jpg" alt="Crypto Dashboard Computer Screen">
-          </picture>
           <figure>
-            <p class="heading--3">
-              Crypto Dashboard
-            </p>
-            <p class="text--1">
-              2016 Project
-            </p>
+            <picture class="carousel__picture">
+              <source media="(min-width: 1024px)" width="895" height="728" srcset="assets/desktop/image-slide-3.jpg">
+              <source media="(min-width: 768px)" width="438" height="472" srcset="assets/tablet/image-slide-3.jpg">
+              <img class="carousel__img" width="375" height="404" src="assets/mobile/image-slide-3.jpg"
+                alt="Crypto Dashboard Computer Screen">
+            </picture>
+            <figcaption>
+              <p class="heading--3">
+                Crypto Dashboard
+              </p>
+              <p class="text--1">
+                2016 Project
+              </p>
+            </figcaption>
           </figure>
         </li>
       </ul>

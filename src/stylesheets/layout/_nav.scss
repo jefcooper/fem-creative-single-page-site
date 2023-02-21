@@ -1,0 +1,76 @@
+@use "../abstracts/mixins";
+
+.nav {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1.5rem;
+  padding-block: 2.5rem;
+}
+.nav .btn--secondary {
+  background-color: var(--theme-btn-primary-bg);
+}
+.nav__list {
+  display: none;
+  position: absolute;
+  top: 110px;
+  right: 1.6rem;
+  padding-top: 2rem;
+  text-align: center;
+  background-color: var(--theme-bg-dark);
+  color: var(--theme-clr-light);
+}
+.nav__toggle:checked ~ .nav__list {
+  display: grid;
+}
+.nav .btn {
+  margin: 1.6rem;
+}
+.nav__toggle-open {
+}
+.nav__toggle-close {
+  display: none;
+}
+.nav__toggle:checked ~ .nav__toggle-close {
+  display: block;
+}
+.nav__toggle:checked ~ .nav__toggle-open {
+  display: none;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include mixins.media-breakpoint("tablet") {
+  .nav__list {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.25rem;
+    align-items: center;
+    padding-top: 0;
+    text-align: left;
+    background-color: var(--theme-bg);
+    color: var(--theme-clr);
+  }
+  .nav__toggle-label {
+    display: none;
+  }
+  .nav .btn--secondary {
+    background-color: var(--theme-btn-secondary-bg);
+  }
+  .nav .btn {
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+  .nav__toggle-open {
+    display: none;
+  }
+  .nav__toggle-close {
+    display: none;
+  }
+}

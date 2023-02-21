@@ -41,11 +41,14 @@
  */
 .btn--link {
   color: var(--theme-btn-link-clr);
-  text-decoration: underline;
   padding: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+  border-color: var(--theme-clr-accent);
 
   &:hover {
     color: var(--theme-btn-primary-bg-hover);
+    border-color: var(--theme-btn-primary-bg-hover);
   }
 }
 

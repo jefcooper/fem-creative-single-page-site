@@ -1,0 +1,19 @@
+.design {
+  color: var(--theme-clr-light);
+  background-color: var(--theme-bg-dark);
+}
+
+.design img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.design__container {
+  padding-inline: 1.5rem;
+  padding-block: 4.5rem;
+}
+
+.design__description {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}

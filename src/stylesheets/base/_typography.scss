@@ -24,7 +24,6 @@
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0px;
-  color: var(--theme-clr);
 }
 
 .heading--2 {
@@ -36,7 +35,6 @@
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0px;
-  color: var(--theme-clr);
 }
 
 .heading--3 {
@@ -48,7 +46,6 @@
   font-weight: 800;
   line-height: 1.667;
   letter-spacing: 0px;
-  color: var(--theme-clr);
 }
 
 .text--1 {
@@ -58,7 +55,6 @@
   // desktop 18/32-400
   font-size: functions.ramp(0.9375rem, 1.125rem, 768px, 1440px);
   line-height: 1.6667;
-  color: var(--theme-clr);
 }
 .btn {
   @include font-base;

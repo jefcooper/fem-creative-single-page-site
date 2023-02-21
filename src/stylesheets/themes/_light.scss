@@ -3,9 +3,11 @@
 
 @mixin theme--light {
   --theme-bg: #{colors.$clr-neutral-100};
+  --theme-bg-dark: #{colors.$clr-neutral-800};
   --theme-clr: #{colors.$clr-neutral-900};
   --theme-clr-light: #{colors.$clr-neutral-100};
   --theme-clr-focus: #{colors.$clr-neutral-900};
+  --theme-clr-accent: #{colors.$clr-accent-400};
 
   --theme-btn-clr: #{colors.$clr-neutral-100};
   --theme-btn-link-clr: #{colors.$clr-accent-400};

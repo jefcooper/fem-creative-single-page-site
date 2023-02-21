@@ -2,6 +2,11 @@
 @use "../abstracts/functions";
 
 .footer {
+  padding-inline: 1.5rem;
+  padding-block: 6.25rem;
+}
+.footer .btn {
+  margin-top: 3rem;
 }
 
 /*----------------------------------------------------------------------------

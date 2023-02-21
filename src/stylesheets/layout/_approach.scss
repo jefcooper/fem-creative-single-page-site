@@ -1,0 +1,38 @@
+.approach {
+  color: var(--theme-clr-light);
+  background-color: var(--theme-clr-accent);
+
+  padding-block: 6rem;
+  padding-inline: 1.5rem;
+}
+
+.approach__title {
+  line-height: 1.25;
+}
+
+.approach__list {
+  list-style: none;
+  padding: 0;
+  counter-reset: approach-list;
+}
+
+.approach__list-item {
+  --_top-spacing: 2.5rem;
+  --_left-spacing: 1rem;
+  position: relative;
+  counter-increment: approach-list;
+  margin-top: var(--_top-spacing);
+  margin-left: var(--_left-spacing);
+}
+.approach__list-item::before {
+  position: absolute;
+  content: counter(approach-list, decimal-leading-zero);
+  font-size: 5rem;
+  font-weight: 800;
+  opacity: 25%;
+  margin-top: calc(-1 * var(--_top-spacing));
+  margin-left: calc(-1 * var(--_left-spacing));
+}
+.approach__list-item-description {
+  margin-top: 1rem;
+}
