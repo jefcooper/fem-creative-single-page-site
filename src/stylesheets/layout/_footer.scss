@@ -1,0 +1,11 @@
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+
+.footer {
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include mixins.media-breakpoint("tablet") {
+}

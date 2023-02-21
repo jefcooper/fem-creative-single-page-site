@@ -1,0 +1,13 @@
+@use "../abstracts/mixins";
+
+.main {
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include mixins.media-breakpoint("tablet") {
+  .main {
+    @include mixins.container;
+  }
+}

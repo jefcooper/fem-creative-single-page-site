@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * Typography
+ *
+ *******************************************************************************/
+
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+
+@mixin font-base {
+  font-family: "League Spartan";
+  font-weight: 500;
+  font-size: 1rem;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.heading--1 {
+  @include font-base;
+  font-size: functions.ramp(3rem, 6rem, 320px, 720px);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 2px;
+  max-width: 10ch;
+  color: var(--theme-clr-light);
+}
+
+.text--1 {
+  @include font-base;
+  font-size: 1.125rem;
+  line-height: 1.333;
+  color: var(--theme-clr-light);
+  backdrop-filter: blur(0.5rem);
+  border-radius: 0.5rem;
+}
+.btn {
+  @include font-base;
+  font-size: functions.ramp(0.8rem, 1.125rem, 300px, 375px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.text--center {
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include mixins.media-breakpoint("tablet") {
+}

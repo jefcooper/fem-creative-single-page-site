@@ -1,0 +1,47 @@
+/*****************************************************************************
+ * functions
+ *
+ *  Reusable functions.
+ *
+ *****************************************************************************/
+@use "sass:math";
+
+@function pxToRem($pxValue) {
+  @return math.div($pxValue, 16px) * 1rem;
+}
+
+@function pxLineHeight($fontPx, $linePx) {
+  @return math.div($linePx, $fontPx);
+}
+
+@function ramp($min-size, $max-size, $min-width, $max-width) {
+  $slope: math.div(
+    (toPx($max-size) - toPx($min-size)),
+    (toPx($max-width) - toPx($min-width))
+  );
+  $intercept: -1 * toPx($min-width) * $slope + toPx($min-size);
+  @return clamp(
+    $min-size,
+    calc(toRem($intercept) + $slope * 100 * 1vw),
+    $max-size
+  );
+}
+
+@function toPx($value) {
+  @if unit($value) == "rem" {
+    @return math.div($value, $value * 0 + 1) * 16px;
+  } @else if unit($value) == "px" {
+    @return $value;
+  } @else if unitless($value) {
+    @return $value * 1px;
+  }
+}
+@function toRem($value) {
+  @if unit($value) == "rem" {
+    @return $value;
+  } @else if unit($value) == "px" {
+    @return math.div($value, 16px) * 1rem;
+  } @else if unitless($value) {
+    @return math.div($value, 16) * 1rem;
+  }
+}
