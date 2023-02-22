@@ -17,12 +17,13 @@
 
 <body class="body theme--light">
   <header class="header">
-    <nav class="nav">
+    <label for="nav__toggle" class="nav__overlay nav__overlay--hidden" data-nav-overlay></label>
+    <nav class="nav" data-nav>
       <a href="#" class="nav__logo">
         <span class="visually-hidden">Creative Agency Home</span>
         <img src="assets/logo.svg" alt="" aria-hidden="true">
       </a>
-      <input type="checkbox" id="nav__toggle" class="visually-hidden nav__toggle">
+      <input data-nav-toggle type="checkbox" id="nav__toggle" class="visually-hidden nav__toggle">
       <label for="nav__toggle" class="nav__toggle-open">
         <span class="visually-hidden">Show Mobile Menu</span>
         <svg class="icon icon--hamburger" aria-hidden="true">
@@ -35,7 +36,7 @@
           <use href="assets/icons.svg#icon--cross"></use>
         </svg>
       </label>
-      <ul class="nav__list">
+      <ul class="nav__list" data-nav-list>
         <li>
           <a class="menu--1" href="#">About</a>
         </li>

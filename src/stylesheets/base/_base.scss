@@ -5,6 +5,13 @@
   background-color: var(--theme-bg);
   @include typography.font-base;
   transition: all var(--transition-default-time) ease-in;
+
+  // to avoid layout shift when hide/show mobile menu, hide the vertical scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 a:focus-visible {
